@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ice Cream Parlor</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Background and overall layout improvements */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #ff9a8b, #f7b7a3);
+        }
+
+        header {
+            background-color: #ffcc00;
+        }
+
+        header h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3rem;
+        }
+
+        /* Menu section styles */
+        .menu .col-md-3 {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu .col-md-3:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu img {
+            border-radius: 15px;
+            border: 5px solid #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu img:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-primary, .btn-success {
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover, .btn-success:hover {
+            background-color: #e67e22;
+        }
+
+        .intro h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3.5rem;
+            color: #fff;
+        }
+
+        .contact h2 {
+            font-family: 'Arial', sans-serif;
+            color: #2c3e50;
+        }
+
+        footer {
+            background-color: #2c3e50;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Form enhancements */
+        .form-control {
+            border-radius: 30px;
+            padding: 15px;
+            border: 2px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .form-control:focus {
+            border-color: #e67e22;
+        }
+
+        /* Button improvements */
+        .btn {
+            border-radius: 30px;
+        }
+
+        .selection {
+            animation: fadeIn 1s ease;
+        }
+
+        /* Simple animation for fadeIn */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3 mb-0">Amul Cream Parlor</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#home" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link text-white">Menu</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="intro py-5 text-center">
+        <div class="container">
+            <h2>Welcome to the Amul Ice Cream Parlor!</h2>
+            <p>Your sweet escape to a world of delicious ice cream flavors!</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Menu</h2>
+            <div class="row">
+                <!-- Existing Ice Cream Flavors -->
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="vanilla.jpg" alt="Vanilla Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Vanilla</h3>
+                    <p>Classic, creamy, and smooth.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="chocolate.jpg" alt="Chocolate Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Chocolate</h3>
+                    <p>Rich, indulgent, and chocolaty.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="strawberry.jpg" alt="Strawberry Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Strawberry</h3>
+                    <p>Fresh, fruity, and refreshing.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="mint.jpg" alt="Mint Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Mint</h3>
+                    <p>Cool, crisp, and minty.</p>
+                </div>
+
+                
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="cookie_dough.webp" alt="Cookie Dough Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Cookie Dough</h3>
+                    <p>Sweet cookie dough chunks in vanilla ice cream.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="Caramel.webp" alt="Caramel Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Caramel</h3>
+                    <p>Rich caramel swirls in creamy vanilla ice cream.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="Rockey_road.jpg" alt="Rocky Road Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Rocky Road</h3>
+                    <p>Marshmallows, almonds, and chocolate ice cream.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="pistachio.jpg" alt="Pistachio Ice Cream" class="img-fluid rounded mb-2">
+                    <h3>Pistachio</h3>
+                    <p>A rich blend of roasted pistachios in smooth ice cream.</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="showSelection()">Select Your Flavor</button>
+            <div id="selection" class="selection mt-4" style="display:none;">
+                <label for="flavor">Choose your flavor:</label>
+                <select id="flavor" class="form-control mb-2">
+                    <option value="Vanilla">Vanilla</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Mint">Mint</option>
+                    <option value="Cookie Dough">Cookie Dough</option>
+                    <option value="Caramel">Caramel</option>
+                    <option value="Rocky Road">Rocky Road</option>
+                    <option value="Pistachio">Pistachio</option>
+                </select>
+                <button class="btn btn-success" onclick="confirmSelection()">Confirm</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Ice Cream Parlor | All Rights Reserved</p>
+    </footer>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to show the flavor selection dropdown
+        function showSelection() {
+            document.getElementById("selection").style.display = "block";
+        }
+
+        // Function to confirm the selection and display the chosen flavor
+        function confirmSelection() {
+            var flavor = document.getElementById("flavor").value;
+            alert("You have selected the " + flavor + " flavor!");
+        }
+
+        // Function to validate the contact form before submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get form input values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Simple validation check
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Display a success message or handle the submission
+            alert("Thank you, " + name + "! Your message has been sent.");
+
+            // Clear the form fields after submission
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+
+</body>
+</html>
